@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import '../css/OcrComponent.css';
 import DisplayImages from './DisplayImages';
-import { SERVER_API_URL_UPLOAD } from  '../Constants/ConstantVals.js';
+// import { SERVER_API_URL_UPLOAD } from  '../Constants/ConstantVals.js';
 
 function OcrComponent() {
   const [text, setText] = useState('');
@@ -10,7 +10,7 @@ function OcrComponent() {
   const [error, setError] = useState('');
   const [processing, setProcessing] = useState(false);
   const [showImageList, setShowImageList] = useState(false);
-  const serverApiUrl = SERVER_API_URL_UPLOAD;
+  // const serverApiUrl = SERVER_API_URL_UPLOAD;
 
 
   const handleImageUpload = async (e) => {
@@ -27,7 +27,7 @@ function OcrComponent() {
     formData.append('image', selectedImage);
 
     try {
-      const response = await axios.post(serverApiUrl, formData, {
+      const response = await axios.post(process.env.REACT_APP_SERVER_API_URL_UPLOAD, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
