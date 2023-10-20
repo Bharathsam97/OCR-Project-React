@@ -1,0 +1,28 @@
+/* ImageList.css */
+.image-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .image-card {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background-color: #fff;
+    width: 300px;
+  }
+  
+  .image-card img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .image-text {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  
